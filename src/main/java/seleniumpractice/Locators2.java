@@ -23,7 +23,7 @@ public class Locators2 {
 		driver.findElement(By.cssSelector("input#inputUsername")).sendKeys(m);
 		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
 		Thread.sleep(2000);
-//		login
+//		login 
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 //		System.out.println("You are successfully logged in.");
 		driver.findElement(By.xpath("//p[text()='You are successfully logged in.']")).getText();
