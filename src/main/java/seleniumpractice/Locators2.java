@@ -5,7 +5,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 public class Locators2 {
@@ -15,9 +14,9 @@ public class Locators2 {
 		//use this string variable where the name changes dynamically so giving this string var in all sendkeys & in actual resullt
 		String m = "Rahul";
 //		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DI18\\eclipse-workspace\\Selenium1\\driver\\chromedriver.exe");
-//		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\DI18\\eclipse-workspace\\Selenium1\\driver\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();		
+//		WebDriver driver = new FirefoxDriver();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.findElement(By.cssSelector("input#inputUsername")).sendKeys(m);

@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Locators {
+public class Locators1 {
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrme.driver", "C:\\Users\\DI18\\eclipse-workspace\\Selenium1\\driver");
+	public static void main(String[] args)  {
+		
+		//System.setProperty("webdriver.chrme.driver", "C:\\Users\\DI18\\eclipse-workspace\\Selenium1\\driver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.findElement(By.id("inputUsername")).sendKeys("Hema");
@@ -29,11 +29,11 @@ public class Locators {
 		driver.findElement(By.cssSelector(".go-to-login-btn")).click();
 		driver.findElement(By.cssSelector("input#inputUsername")).sendKeys("Achu");
 		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
-		Thread.sleep(5000);
+		
 //		login
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		System.out.println("You are successfully logged in.");
-		Thread.sleep(5000);
+		
 		//logout
 		driver.findElement(By.xpath("//div[@class='login-container']/button")).click();
 		System.out.println("You are successfully logged Out.");
